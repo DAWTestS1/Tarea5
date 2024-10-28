@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Programación</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Ejemplos Prácticos de Programación</h1>
+        <nav>
+            <ul>
+                <li><a href="#control-flujo">Control de Flujo</a></li>
+                <li><a href="#bucles">Bucles</a></li>
+                <li><a href="#funciones">Funciones</a></li>
+                <li><a href="#objetos">Objetos y Manejo de Errores</a></li>
+                <li><a href="#operadores">Operadores</a></li>
+                <li><a href="#numeros-fechas">Números y Fechas</a></li>
+                <li><a href="#colecciones">Colecciones Indexadas</a></li>
+                <li><a href="#dom">DOM</a></li>                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="control-flujo">
+            <h2>Control de Flujo</h2>
+            <h3>if...else</h3>
+            <pre><code>
+let numero = 5;
+if (numero > 0) {
+    console.log('El número es positivo');
+} else {
+    console.log('El número es negativo o cero');
+            </code></pre>
+            <button onclick="ejecutarIfElse()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>switch</h3>
+            <pre><code>
+let dia = 2;
+switch (dia) {
+    case 1:
+        console.log('Lunes');
+        break;
+    case 2:
+        console.log('Martes');
+        break;
+    default:
+        console.log('Otro día');
+}
+            </code></pre>
+            <button onclick="ejecutarSwitch()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+        </section>
+
+        <section id="bucles">
+            <h2>Bucles e Iteración</h2>
+            <h3>for</h3>
+            <pre><code>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+            </code></pre>
+            <button onclick="ejecutarFor()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>while</h3>
+            <pre><code>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+            </code></pre>
+            <button onclick="ejecutarWhile()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>do...while</h3>
+            <pre><code>
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 5);
+            </code></pre>
+            <button onclick="ejecutarDoWhile()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+        </section>
+
+        <section id="funciones">
+            <h2>Funciones</h2>
+            <h3>Definir funciones</h3>
+            <pre><code>
+function sumar(a, b) {
+    return a + b;
+}
+            </code></pre>
+            <h3>Llamar funciones</h3>
+            <pre><code>
+console.log(sumar(3, 4)); // 7
+            </code></pre>
+            <button onclick="ejecutarFunciones()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+        </section>
+
+        <section id="objetos">
+            <h2>Objetos y Manejo de Errores</h2>
+            <h3>try/catch/throw</h3>
+            <pre><code>
+try {
+    throw new Error('¡Algo salió mal!');
+} catch (e) {
+    console.error(e.message);
+}
+            </code></pre>
+            <button onclick="ejecutarTryCatch()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>Objetos Error</h3>
+            <pre><code>
+const error = new Error('Este es un error');
+console.log(error.message);
+            </code></pre>
+            <button onclick="ejecutarObjetosError()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+        </section>
+
+        <section id="operadores">
+            <h2>Operadores</h2>
+            <h3>Operadores Aritméticos</h3>
+            <pre><code>
+let a = 10;
+let b = 5;
+console.log(a + b); // Suma
+console.log(a - b); // Resta
+console.log(a * b); // Multiplicación
+console.log(a / b); // División
+console.log(a % b); // Módulo
+            </code></pre>
+            <button onclick="ejecutarOperadoresAritmeticos()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>Operadores Lógicos</h3>
+            <pre><code>
+let x = true;
+let y = false;
+console.log(x && y); // AND
+console.log(x || y); // OR
+console.log(!x); // NOT
+            </code></pre>
+            <button onclick="ejecutarOperadoresLogicos()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+        </section>
+
+        <section id="numeros-fechas">
+            <h2>Números y Fechas</h2>
+            <h3>Uso del objeto Number</h3>
+            <pre><code>
+let numero = Number('42');
+console.log(numero); // 42
+            </code></pre>
+            <button onclick="ejecutarNumero()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>Uso del objeto Math</h3>
+            <pre><code>
+console.log(Math.sqrt(16)); // 4
+console.log(Math.random()); // Número aleatorio entre 0 y 1
+            </code></pre>
+            <button onclick="ejecutarMath()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>Uso del objeto Date</h3>
+            <pre><code>
+let fecha = new Date();
+console.log(fecha); // Fecha y hora actuales
+            </code></pre>
+            <button onclick="ejecutarDate()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+        </section>
+
+        <section id="colecciones">
+            <h2>Colecciones Indexadas</h2>
+            <h3>Arreglos</h3>
+            <pre><code>
+let arreglo = [1, 2, 3, 4, 5];
+console.log(arreglo[0]); // 1
+            </code></pre>
+            <button onclick="ejecutarArreglos()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <h3>Arreglos Tipados</h3>
+            <pre><code>
+let arregloTipado = new Int32Array(5);
+arregloTipado[0] = 10;
+console.log(arregloTipado[0]); // 10
+            </code></pre>
+            <button onclick="ejecutarArreglosTipados()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+        </section>
+
+          <section id="dom">
+            <h2>Manipulación del DOM</h2>
+            <h3>Encontrar elementos HTML</h3>
+            <pre><code>
+let elemento = document.getElementById('miElemento');
+let elementosPorClase = document.getElementsByClassName('miClase');
+let elementosPorEtiqueta = document.getElementsByTagName('p');
+let elementosPorSelector = document.querySelector('.miClase');
+            </code></pre>
+            <button onclick="ejecutarDOM()">Ejecutar</button>
+            <button onclick="limpiarConsola()">Limpiar Consola</button>
+            <p id="miElemento">Este es un párrafo que se puede encontrar en el DOM.</p>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

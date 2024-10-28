@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
